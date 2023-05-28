@@ -74,8 +74,8 @@ echo -e "Domain         : ${domain}"
 echo -e "Port TLS       : ${tls}"
 echo -e "Port none TLS  : ${none}"
 echo -e "Port  GRPC     : ${tls}"
-echo -e "Alt Port TLS  : 2053, 2083, 2087, 2096, 8443" | tee -a /user/log-vmess-$user.txt
-echo -e "Alt Port NTLS : 8080, 8880, 2052, 2082, 2086, 2095" | tee -a /user/log-vmess-$user.txt
+echo -e "Alt Port TLS  : 2053, 2083, 2087, 2096, 8443" | tee -a /etc/log-create-user.log
+echo -e "Alt Port NTLS : 8080, 8880, 2052, 2082, 2086, 2095" | tee -a /etc/log-create-user.log
 echo -e "id             : ${uuid}"
 echo -e "alterId        : 0"
 echo -e "Security       : auto"
