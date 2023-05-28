@@ -49,14 +49,16 @@ clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;41;36m           Trial TROJAN           \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Remarks      : ${user}"
-echo -e "Host/IP      : ${domain}"
-echo -e "Port TLS     : 443" | tee -a /user/log-trojan-$user.txt
-echo -e "Port NTLS    : 80" | tee -a /user/log-trojan-$user.txt
-echo -e "Port gRPC    : 443" | tee -a /user/log-trojan-$user.txt
-echo -e "Key          : ${uuid}"
-echo -e "Path         : /trojan-ws"
-echo -e "ServiceName  : trojan-grpc"
+echo -e "Remarks        : ${user}"
+echo -e "Host/IP        : ${domain}"
+echo -e "Port TLS       : 443" | tee -a /etc/log-create-user.log
+echo -e "Port none TLS  : 80" | tee -a /etc/log-create-user.log
+echo -e "Port  GRPC     : 443" | tee -a /etc/log-create-user.log
+echo -e "Alt Port TLS   : 2053, 2083, 2087, 2096, 8443" | tee -a /etc/log-create-user.log
+echo -e "Alt Port NTLS  : 8080, 8880, 2052, 2082, 2086, 2095" | tee -a /etc/log-create-user.log
+echo -e "Key            : ${uuid}"
+echo -e "Path           : /trojan-ws"
+echo -e "ServiceName    : trojan-grpc"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Link WS      : ${trojanlink1}"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
