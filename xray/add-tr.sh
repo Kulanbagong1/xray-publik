@@ -51,7 +51,9 @@ echo -e "\E[0;41;36m           Trial TROJAN           \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Remarks      : ${user}"
 echo -e "Host/IP      : ${domain}"
-echo -e "port         : ${tr}"
+echo -e "Port TLS     : 443" | tee -a /user/log-trojan-$user.txt
+echo -e "Port NTLS    : 80" | tee -a /user/log-trojan-$user.txt
+echo -e "Port gRPC    : 443" | tee -a /user/log-trojan-$user.txt
 echo -e "Key          : ${uuid}"
 echo -e "Path         : /trojan-ws"
 echo -e "ServiceName  : trojan-grpc"
