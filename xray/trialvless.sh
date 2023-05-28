@@ -23,6 +23,9 @@ echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "port TLS       : $tls"
 echo -e "port none TLS  : $none"
+echo -e "prot gRPC      : 443" | tee -a /etc/log-create-user.log
+echo -e "Alt Port TLS   : 2053, 2083, 2087, 2096, 8443" | tee -a /etc/log-create-user.log
+echo -e "Alt Port NTLS  : 8080, 8880, 2052, 2082, 2086, 2095" | tee -a /etc/log-create-user.log
 echo -e "id             : ${uuid}"
 echo -e "Encryption     : none"
 echo -e "Network        : ws"
