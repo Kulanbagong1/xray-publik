@@ -54,6 +54,9 @@ echo -e "Remarks        : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Domain         : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "port TLS       : $tls" | tee -a /etc/log-create-user.log
 echo -e "port none TLS  : $none" | tee -a /etc/log-create-user.log
+echo -e "prot gRPC      : 443 | tee -a /etc/log-create-user.log
+echo -e "Alt Port TLS   : 2053, 2083, 2087, 2096, 8443" | tee -a /user/log-vmess-$user.txt
+echo -e "Alt Port NTLS  : 8080, 8880, 2052, 2082, 2086, 2095" | tee -a /user/log-vmess-$user.txt
 echo -e "id             : ${uuid}" | tee -a /etc/log-create-user.log
 echo -e "Encryption     : none" | tee -a /etc/log-create-user.log
 echo -e "Network        : ws" | tee -a /etc/log-create-user.log
